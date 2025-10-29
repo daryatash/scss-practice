@@ -1,0 +1,13 @@
+.title {
+    font-size: 64px;
+    color: var(--color-green);
+    text-align: center;
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    @include mobile {
+        font-size: 48px;
+    }
+}

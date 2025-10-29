@@ -1,0 +1,46 @@
+.section {
+    position: relative;
+    overflow: hidden;
+    padding-top: var(--section-padding-top);
+    padding-bottom: var(--section-padding-bottom);
+    background-color: var(--color-gray);
+
+    @include mobile {
+        padding-top: 32px;
+        padding-bottom: 64px;
+    }
+
+    &--light {
+        background-color: var(--color-light);
+    }
+
+    &--with-bg {
+        padding-block: 0;
+        background: none;
+    }
+
+    &--with-bg::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw;
+        height: 100%;
+        background: center/cover no-repeat;
+        z-index: -1;
+    }
+    
+    &--bg-hero::before {
+        background-image: url('../images/hero-bg.jpg');
+    }
+    
+    &--bg-together::before {
+        background-image: url('../images/together-bg.jpg');
+    }
+
+    &[id] {
+        scroll-margin-top: var(--header-height);
+        overflow: visible;
+    }
+}

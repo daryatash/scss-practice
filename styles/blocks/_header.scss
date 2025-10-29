@@ -1,0 +1,47 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-green);
+    padding-block: 20px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 20px;
+    }
+
+    &__menu {
+        &-list {
+            display: flex;
+            column-gap: 24px;
+            font-weight: 500;
+        }
+
+        &-item {
+            position: relative;
+            color: var(--color-light);
+
+            &:not(:last-child)::after {
+                content: '';
+                position: absolute;
+                right: -12px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 2px;
+                height: 20px;
+                background-color: currentColor;
+            }
+        }
+
+        &-link {
+            font-size: 24px;
+            height: 40px;
+
+            @include hover {
+                color: var(--color-gray);
+            }
+        }
+    }
+}

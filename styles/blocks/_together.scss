@@ -1,0 +1,23 @@
+.together {
+    padding-block: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mobile {
+        padding-block: 80px;
+    }
+
+    &__title {
+        max-width: 893px;
+        font-size: 48px;
+        font-weight: 500;
+        font-style: italic;
+        color: var(--color-light);
+        text-align: center;
+
+        @include mobile {
+            font-size: 32px;
+        }
+    }
+}

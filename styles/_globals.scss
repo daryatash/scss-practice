@@ -1,0 +1,25 @@
+body {
+    font-family: var(--font-family-base);
+    scroll-behavior: smooth;
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-size: 32px;
+
+    @include mobile {
+        font-size: 26px;
+    }
+}

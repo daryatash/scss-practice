@@ -1,0 +1,14 @@
+.hero {
+    padding-block: 160px;
+
+    &__title {
+        font-size: 72px;
+        font-weight: 500;
+        color: var(--color-light);
+        text-align: center;
+
+        @include mobile {
+            font-size: 50px;
+        }
+    }
+}
